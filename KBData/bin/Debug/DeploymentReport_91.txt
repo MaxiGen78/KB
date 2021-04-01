@@ -1,0 +1,26 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Admin] (Table)
+       [dbo].[Order] (Table)
+       [dbo].[OrderDetail] (Table)
+       [dbo].[Product] (Table)
+       [dbo].[ProductCategory] (Table)
+       [dbo].[ProductImage] (Table)
+       Default Constraint: unnamed constraint on [dbo].[Product] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Product] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Product] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[Product] (Default Constraint)
+       [dbo].[spGetAllCategories] (Procedure)
+       [dbo].[spGetAllProducts] (Procedure)
+
+** Supporting actions

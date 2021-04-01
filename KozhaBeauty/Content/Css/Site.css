@@ -1,0 +1,128 @@
+﻿/*Caramel Color: #bf9959*/
+*{
+    /*border:1px solid red !important*/
+}
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+@font-face {
+    font-family: 'akaFrivolity';
+    src: url('Fonts/akaFrivolity.ttf') format('truetype');
+}
+
+.body-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top:20px;
+}
+
+.under-construction {
+    font-size: 3rem;
+    font-style: italic;
+    text-align: center;
+    border-style: solid;
+    padding: 60px 20px;
+    max-width: 700px;
+    align-self: center;
+    color: #fff;
+    border-color: #bf9959;
+}
+.navbar {
+    background-color: #bf9959 !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #000;
+}
+.curly {
+    font-family: 'akaFrivolity';
+}
+
+
+footer {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    color:#fff;
+}
+
+
+
+
+
+
+.add-form form div{
+    margin-bottom:10px;
+}
+
+.admin-input-box {
+    width:100%;
+}
+.admin-name{
+    color:#fff;
+    font-size:1.5em;
+}
+.admin-entry{
+    margin-bottom:40px;
+    position:relative;
+    max-width:400px;
+}
+.admin-delete {
+    position:absolute;
+    right:0;
+    bottom:10px;
+    
+}
+.admin-delete button {
+    background-color: orangered;
+}
+.input-description {
+    display:block;
+    font-size:1rem;
+    font-style:italic;
+}
+.char-num-display{
+    margin-left:5px;
+}
+.input-field {
+    display:flex;
+}
+
+
+#SelectedCategoryAnchor{
+    margin-top:10px;
+}
+.deselect-category:hover {
+    cursor: pointer;
+}
+.deselect-category {
+    color: red;
+    padding-left: 15px;
+    font-size: 0.7rem;
+}
+.number {
+    width: 6rem;
+}
+
+
+
+.hidden {
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    .under-construction {
+        font-size: 4rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .under-construction {
+        font-size: 5rem;
+        max-width: 900px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+
+}

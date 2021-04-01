@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="3c3b7900-02df-41e4-bd59-9065cff4fedf" ChangeDateTime="02/13/2021 11:51:46">
+    <Property Name="ElementName" Value="[dbo].[Order].[OrderDare]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="OrderDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c35fb90e-8728-4b26-9846-b2e64d466d02" ChangeDateTime="02/13/2021 11:57:00">
+    <Property Name="ElementName" Value="[dbo].[Product].[D\escription]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Product]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Description" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3079ca19-a2d0-499f-9f57-468836e224e1" ChangeDateTime="02/21/2021 20:02:21">
+    <Property Name="ElementName" Value="[dbo].[ProductImages].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ProductImages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductImageName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e5c643b8-5809-4cd0-9659-3cddb3ca7571" ChangeDateTime="02/21/2021 20:02:27">
+    <Property Name="ElementName" Value="[dbo].[ProductImages].[Location]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ProductImages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductImageLocation" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="33c73f2c-3e2f-4d33-ac7d-7316a644b8de" ChangeDateTime="02/24/2021 01:33:19">
+    <Property Name="ElementName" Value="[dbo].[ProductImages].[ProductID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ProductImages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductImageId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b05adf92-4c28-43f5-becc-350d330838ff" ChangeDateTime="02/24/2021 01:33:30">
+    <Property Name="ElementName" Value="[dbo].[ProductImages].[ProductImageId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ProductImages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductId" />
+  </Operation>
+</Operations>

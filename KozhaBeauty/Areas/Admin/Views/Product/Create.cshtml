@@ -1,0 +1,156 @@
+﻿@model KozhaBeauty.Areas.Admin.ViewModels.ProductViewModel
+@using KozhaBeauty.Utilities
+
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+@using (Html.BeginForm("Create", "Product", FormMethod.Post))
+{
+    @Html.Hidden("Id", 0)
+
+    @*Name*@
+    <div class="admin-entry">
+        <div class="admin-name">
+            @Html.LabelFor(model => model.ProductModel.Name)
+            <label class="input-description">@Html.DescriptionFor(model => model.ProductModel.Name)</label>
+        </div>
+        <div class="add-form">
+            <div class="input-field">
+                @Html.EditorFor(model => model.ProductModel.Name, new { htmlAttributes = new { @class = "admin-input-box product-name" } })
+                <span class="char-num-display"></span>
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.ProductModel.Name, "", new { @class = "text-danger admin-validation" })
+            </div>
+        </div>
+    </div>
+
+    @*Slug*@
+    <div class="admin-entry">
+        <div class="admin-name">
+            @Html.LabelFor(model => model.ProductModel.Slug)
+        </div>
+        <div class="add-form">
+            <div class="input-field">
+                @Html.EditorFor(model => model.ProductModel.Slug, new { htmlAttributes = new { @class = "admin-input-box slug" } })
+                <span class="char-num-display"></span>
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.ProductModel.Slug, "", new { @class = "text-danger admin-validation" })
+            </div>
+        </div>
+    </div>
+
+    @*Description*@
+    <div class="admin-entry">
+        <div class="admin-name">
+            @Html.LabelFor(model => model.ProductModel.Description)
+        </div>
+        <div class="add-form">
+            <div class="input-field">
+                @Html.TextAreaFor(model => model.ProductModel.Description, 5, 600, new { @class = "admin-input-box" })
+                <span class="char-num-display"></span>
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.ProductModel.Description, "", new { @class = "text-danger admin-validation" })
+            </div>
+        </div>
+    </div>
+
+    @*Category*@
+    @*<div class="admin-entry">
+        <div class="admin-name">
+            @Html.LabelFor(model => model.ProductModel.ProductCategoryList)
+        </div>
+        <div class="add-form">
+            <div class="input-field">
+                @Html.DropDownListFor(model => model.SelectedCategoryId,
+                    Model.CategoryModels.Select(x =>
+                        new SelectListItem { Text = x.Name, Value = x.Id.ToString() }), "Select category")
+
+            </div>
+            <div id="SelectedCategoryAnchor"></div>
+        </div>
+    </div>*@
+
+    @*Quantity*@
+    <div class="admin-entry">
+        <div class="admin-name">
+            @Html.LabelFor(model => model.ProductModel.Quantity)
+        </div>
+        <div class="add-form">
+            <div class="input-field">
+                @Html.EditorFor(model => model.ProductModel.Quantity, new { htmlAttributes = new { @class = "admin-input-box number", @min = "-1" } })
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.ProductModel.Quantity, "", new { @class = "text-danger admin-validation" })
+            </div>
+        </div>
+    </div>
+
+    @*Price*@
+    <div class="admin-entry">
+        <div class="admin-name">
+            @Html.LabelFor(model => model.ProductModel.Price)
+        </div>
+        <div class="add-form">
+            <div class="input-field">
+                @Html.EditorFor(model => model.ProductModel.Price, new { htmlAttributes = new { @class = "admin-input-box number" } })
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.ProductModel.Price, "", new { @class = "text-danger admin-validation" })
+            </div>
+        </div>
+    </div>
+
+    @*Image*@
+    <!--<div class="admin-entry">
+        <div class="admin-name">
+            @Html.LabelFor(model => model.ProductImage)
+        </div>
+        <div class="add-form">
+            <div class="input-field">
+                @Html.EditorFor(model => model.ProductImage.Name, new { htmlAttributes = new { @class = "admin-input-box", @id = "image-upload", @type = "file", @multiple = true, @accept = "image/*" } })
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.ProductImage.Name, "", new { @class = "text-danger admin-validation" })
+            </div>
+        </div>
+        <div>
+            <button id="upload" class="admin-button">Add image</button>
+        </div>
+    </div>-->
+
+    @*IsActive*@
+    <div class="admin-entry">
+        <div class="admin-name">
+            @Html.LabelFor(model => model.ProductModel.IsActive)
+            <label class="input-description">@Html.DescriptionFor(model => model.ProductModel.IsActive)</label>
+        </div>
+        <div class="add-form">
+            <div class="input-field">
+                @Html.CheckBoxFor(model => model.ProductModel.IsActive, htmlAttributes: new { @checked = true })
+            </div>
+            <div>
+                @Html.ValidationMessageFor(model => model.ProductModel.IsActive, "", new { @class = "text-danger admin-validation" })
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button class="admin-button" type="submit">Add New Product</button>
+    </div>
+}
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,82 @@
+﻿@model KozhaBeauty.Areas.Admin.ViewModels.CategoryViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="admin-entry">
+    <div class="admin-name">
+        @Html.Label("Add New Category")
+    </div>
+    <div class="add-form">
+        @using (Html.BeginForm("Create", "Category", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.Hidden("Id", 0)
+
+        <div class="d-flex">
+            @Html.EditorFor(model => model.Model.Name, new { htmlAttributes = new { @class = "admin-input-box" } })
+            <span class="char-num-display"></span>
+        </div>
+
+            <div>
+                @Html.ValidationMessageFor(model => model.Model.Name, "", new { @class = "text-danger admin-validation" })
+            </div>
+
+            <div>
+                <button class="admin-button" type="submit">Add</button>
+            </div>
+        }
+    </div>
+</div>
+
+
+    @foreach (var item in Model.Models)
+    {
+        Model.Model.Id = item.Id;
+        Model.Model.Name = item.Name;
+
+        <div class="admin-entry">
+            <div class="admin-name">
+                <label>@Html.DisplayFor(model => item.Name)</label>
+            </div>
+
+            <div class="add-form">
+                @using (Html.BeginForm("Edit", "Category", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(model => model.Model.Id)
+                    @Html.Hidden("Name", item.Name)
+
+                    <div class="input-field toggle-input hidden">
+                        @Html.EditorFor(model => model.Model.Name, new { htmlAttributes = new { @class = "admin-input-box" } })
+                        <span class="char-num-display"></span>
+                    </div>
+
+                    <div>
+                        @Html.ValidationMessageFor(model => model.Model.Name, "", new { @class = "text-danger admin-validation" })
+                    </div>
+
+                    <div class="admin-edit-buttons">
+                        <button class="admin-button edit" type="reset">Edit</button>
+                        <button class="admin-button save" style="display:none" type="submit">Save</button>
+                    </div>
+                }
+            </div>
+
+            <div class="admin-delete">
+                @using (Html.BeginForm("Delete", "Category", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.Hidden("Id", item.Id)
+                    @Html.Hidden("Name", item.Name)
+
+                    <div>
+                        <button class="admin-button" type="submit">Delete</button>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+
+

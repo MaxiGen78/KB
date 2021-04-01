@@ -1,0 +1,22 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Product]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[Product] (Default Constraint)
+       unnamed constraint on [dbo].[Product] (Default Constraint)
+       unnamed constraint on [dbo].[Product] (Default Constraint)
+       unnamed constraint on [dbo].[Product] (Default Constraint)
+     Table rebuild
+       [dbo].[Product] (Table)
+
+** Supporting actions
+     Refresh
+       [dbo].[spGetAllProducts] (Procedure)

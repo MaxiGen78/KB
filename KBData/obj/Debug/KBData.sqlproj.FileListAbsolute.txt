@@ -1,0 +1,6 @@
+C:\Users\Max\source\repos\KozhaBeauty\KBData\bin\Debug\KBData.dacpac
+C:\Users\Max\source\repos\KozhaBeauty\KBData\bin\Debug\KBData.dll
+C:\Users\Max\source\repos\KozhaBeauty\KBData\bin\Debug\KBData.pdb
+C:\Users\Max\source\repos\KozhaBeauty\KBData\obj\Debug\KBData.dll
+C:\Users\Max\source\repos\KozhaBeauty\KBData\obj\Debug\KBData.pdb
+C:\Users\Max\source\repos\KozhaBeauty\KBData\obj\Debug\KBData.sqlprojAssemblyReference.cache
